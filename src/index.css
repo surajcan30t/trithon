@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0%;
+  padding: 0%;
+  background-color: #232943;
+  color: #e7cf6c;
+  overflow-x: hidden;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+
+
