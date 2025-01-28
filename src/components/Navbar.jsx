@@ -17,7 +17,7 @@ const links = [
 ]
 
 const updates = [
-  { text: 'Registration opens on 25th January 2025' },
+  { text: 'Registration starts on 25th January 2025' },
   { text: 'Registration ends on 5th February 2025' },
 ]
 
@@ -124,6 +124,9 @@ function Menubutton({ path }) {
               </a>
             ))
           }
+          <a key='5' href={TrithonGuidelines} target='_blank' className='text-gray-600 hover:text-gray-900'>
+            Guidelines
+          </a>
         </ul>
 
         <div className='absolute top-[calc(100vh-10rem)] flex md:hdden justify-center items-center gap-9'>

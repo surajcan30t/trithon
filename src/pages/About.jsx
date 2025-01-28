@@ -28,8 +28,8 @@ const About = () => {
         <div className="container mx-auto flex flex-wrap justify-center gap-6">
           <div className="bg-blue-900 text-white p-6 rounded-lg shadow-lg flex flex-col w-full sm:w-1/2 lg:w-1/3">
             <h3 className="text-xl font-semibold">Trithon 2025 (Open Innovation)</h3>
-            <p className="mt-4">Date: 21st & 22nd February 2025</p>
-            <p className="mt-4">This will be an open hackathon, a continuous uninterrupted 24-hour event starting at 11 AM, focusing on problem statements within the event’s theme.</p>
+              <p className="mt-4">Date: 8th & 9th March 2025</p>
+              <p className="mt-4">This will be an open hackathon, a continuous uninterrupted 24-hour event starting at 9 AM, focusing on problem statements within the event&apos;s theme.</p>
             <a href="https://forms.gle/XFU8hw1LrZBsPwNx9" target="_blank" className="mt-6 bg-green-500 text-white py-2 px-4 rounded-md text-center hover:bg-green-600 font-bold">Register</a>
           </div>
         </div>

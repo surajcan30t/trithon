@@ -24,10 +24,10 @@ const Home = () => {
 
             <div className="w-full md:w-[70%] flex flex-col justify-center items-center">
               <h1 className="text-3xl sm:text-5xl font-extrabold text-center">Prizes to be won</h1>
-              <div className="flex flex-wrap justify-center items-center gap-10 sm:gap-20 mt-6">
-                <PrizeCard icon={<GiPodiumSecond className="text-7xl sm:text-9xl text-zinc-400" />} prize="₹20,000" />
-                <PrizeCard icon={<GiPodiumWinner className="text-7xl sm:text-9xl text-[#fdc620]" />} prize="₹30,000" />
-                <PrizeCard icon={<GiPodiumThird className="text-7xl sm:text-9xl text-orange-400" />} prize="₹10,000" />
+              <div className="flex justify-center items-center gap-5 md:gap-20 mt-6">
+                <PrizeCard icon={<GiPodiumSecond className="text-7xl sm:text-9xl text-zinc-400" />} prize="₹20,000" position="2nd" />
+                <PrizeCard icon={<GiPodiumWinner className="text-7xl sm:text-9xl text-[#fdc620]" />} prize="₹30,000" position="1st" />
+                <PrizeCard icon={<GiPodiumThird className="text-7xl sm:text-9xl text-orange-400" />} prize="₹10,000" position="3rd" />
               </div>
               <div className="flex flex-wrap justify-center items-center gap-5 sm:gap-10 mt-5 bg-slate-300 text-stone-700 rounded-lg p-4 text-center">
                 <PrizeText text="4th Place: ₹6,000" />
@@ -98,9 +98,10 @@ const Home = () => {
   )
 }
 
-const PrizeCard = ({ icon, prize }) => (
+const PrizeCard = ({ icon, prize, position }) => (
   <div className="flex flex-col justify-center items-center">
     {icon}
+    <h2 className='text-lg sm:text-xl'>{position}</h2>
     <h1 className="text-2xl sm:text-3xl">{prize}</h1>
   </div>
 );
