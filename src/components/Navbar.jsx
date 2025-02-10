@@ -18,7 +18,8 @@ const links = [
 
 const updates = [
   { text: 'Registration starts on 25th January 2025' },
-  { text: 'Registration ends on 5th February 2025' },
+  { text: 'Registration extended till 17th February 2025, 02:30 pm' },
+  { text: 'Shortlisting of teams extended till 17th February 2025, 05:00 pm' },
 ]
 
 
