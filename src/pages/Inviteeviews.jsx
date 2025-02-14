@@ -66,8 +66,9 @@ const inviteeviews = [
     "quote": "More participation will ensure success & mind-blowing results for TRITHON.",
     "image": card12
   },
+  // the above data as on 1 11 2023
   {
-    "name": "Dr. P. K. Sahu",
+    "name": "Dr. Ajit K Pradhan",
     "title": "HOD CS & IT",
     "institution": "Institute of Technical Education & Research",
     "location": "Bhubaneswar, Odisha",
@@ -364,6 +365,9 @@ const Inviteeviews = () => {
               }
               )
             }
+          </div>
+          <div className='text-sm bg-yellow-100 flex justify-center'>
+            <h1 className='text-black'>**The above data as per 1/11/2023**</h1>
           </div>
         </section>
       </main>
