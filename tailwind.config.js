@@ -9,8 +9,13 @@ export default {
       animation: {
         "marquee": "marquee 2s linear infinite",
         "txt": "txt 2s ease infinite",
+        "bounceH": "bounceX 3s linear infinite alternate",
       },
       keyframes: {
+        bounceH: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(calc(100vw - 100%))" },
+        },
         marquee: {
           "0%": { left: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },

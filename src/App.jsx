@@ -9,6 +9,7 @@ import Slider from './components/Slider'
 import Inviteeviews from './pages/Inviteeviews'
 import ContactUs from './pages/ContactUs'
 import Navbar from './components/Navbar'
+import Results from './pages/Results'
 
 function App() {
   const path = window.location.pathname
@@ -27,6 +28,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/inviteeviews" element={<Inviteeviews />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/results" element={<Results />} />
           </Routes>
         </div>
         <Footer />

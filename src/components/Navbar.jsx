@@ -14,12 +14,11 @@ const links = [
   { name: 'Register', href: '/register' },
   { name: 'Invitee Views', href: '/inviteeviews' },
   { name: 'Contact Us', href: '/contact-us' },
+  { name: 'Results', href: '/results' },
 ]
 
 const updates = [
-  { text: 'Registration starts on 25th January 2025' },
-  { text: 'Registration extended till 21st February 2025 end of the day' },
-  { text: 'Shortlisting of teams on 22nd February 2025' },
+  { text: 'List of shortlisted teams announced!', link: '/results' },
 ]
 
 
@@ -31,10 +30,17 @@ const Navbar = () => {
         <div className='w-full flex flex-col md:flex-row md:p-1 gap-1'>
           <div className='md:w-3/4 flex flex-row p-1 items-center bg-red-500 rounded-lg'>
             <div className='bg-red-500 text-white flex p-1 md:px-5 justify-center rounded-md items-center font-extrabold text-xl'>News: </div>
-            <marquee behavior="scroll" direction="left">
+            <marquee behavior="alternate" >
               <div className='flex flex-row gap-3'>
                 {updates.map((update, index) => (
-                  <div className='text-red-50 font-semibold text-xl' key={index}><div className='flex flex-row justify-center items-center'><TiArrowRightThick />{update.text}</div></div>
+                  console.log(update.link),
+                  <div className='text-red-50 font-semibold text-xl' key={index}>
+                    <div className='flex flex-row justify-center items-center'>
+                      <TiArrowRightThick />
+                      {update.text}
+                      <div>{update.link && <a href={update.link}>&nbsp;<u>Click here to view result</u></a>}</div>
+                    </div>
+                  </div>
                 ))}
               </div>
             </marquee>
@@ -131,22 +137,22 @@ function Menubutton({ path }) {
         </ul>
 
         <div className='absolute top-[calc(100vh-10rem)] flex md:hdden justify-center items-center gap-9'>
-            <a href="https://www.linkedin.com/in/trident-hackathon-club/" target='_blank'>
-              <IoLogoLinkedin className='text-2xl text-gray-400 hover:text-gray-700' />
-            </a>
-            <a href="https://www.instagram.com/tridenthackathonclub/" target='_blank'>
-              <IoLogoInstagram className='text-2xl text-gray-400 hover:text-gray-700' />
-            </a>
-            <a href="https://www.youtube.com/channel/UC9LwUD7Ll1ErF1DLpWfFtUQ" target='_blank'>
-              <IoLogoYoutube className='text-2xl text-gray-400 hover:text-gray-700' />
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100088839415019" target='_blank'>
-              <IoLogoFacebook className='text-2xl text-gray-400 hover:text-gray-700' />
-            </a>
-            <a href="https://twitter.com/TGI_Hackathon" target='_blank'>
-              <RiTwitterXLine className='text-2xl text-gray-400 hover:text-gray-700' />
-            </a>
-          </div>
+          <a href="https://www.linkedin.com/in/trident-hackathon-club/" target='_blank'>
+            <IoLogoLinkedin className='text-2xl text-gray-400 hover:text-gray-700' />
+          </a>
+          <a href="https://www.instagram.com/tridenthackathonclub/" target='_blank'>
+            <IoLogoInstagram className='text-2xl text-gray-400 hover:text-gray-700' />
+          </a>
+          <a href="https://www.youtube.com/channel/UC9LwUD7Ll1ErF1DLpWfFtUQ" target='_blank'>
+            <IoLogoYoutube className='text-2xl text-gray-400 hover:text-gray-700' />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100088839415019" target='_blank'>
+            <IoLogoFacebook className='text-2xl text-gray-400 hover:text-gray-700' />
+          </a>
+          <a href="https://twitter.com/TGI_Hackathon" target='_blank'>
+            <RiTwitterXLine className='text-2xl text-gray-400 hover:text-gray-700' />
+          </a>
+        </div>
       </div>
     </div>
   );
