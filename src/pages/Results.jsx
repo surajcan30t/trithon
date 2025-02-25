@@ -5,7 +5,7 @@ import WaitingListTeams from '../../data/waitinglistteams'
 const Results = () => {
   return (
     <main id="main" className="site-main w-full px-4 md:px-8 lg:px-16 py-8">
-      <section className="bg-gray-900 rounded-lg py-4">
+      <section className="bg-gray-900 rounded-lg px-3 md:px-0 py-4">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-100">Shortlisted Teams for Trithon 2025</h2>
         </div>
@@ -45,8 +45,8 @@ const Results = () => {
         </div>
         <div className="container mx-auto">
           <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-              <thead className="text-lg text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <table className="w-full text-sm text-left rtl:text-right text-gray-400">
+              <thead className="text-lg  uppercase bg-gray-700 text-gray-400">
                 <tr>
                   <th scope="col" className="px-6 py-3">
                     Sl. No.
@@ -60,24 +60,30 @@ const Results = () => {
                   <th scope="col" className="px-6 py-3">
                     Team Leader Email
                   </th>
+                  <th scope="col" className="px-6 py-3">
+                    College Name
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {
                   ShortlistedTeams.map((team, index) => {
                     return (
-                      <tr key={index} className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200 text-lg text-yellow-100">
+                      <tr key={index} className="odd:bg-gray-900 even:bg-gray-800 border-b border-gray-700 text-lg text-yellow-100">
                         <td className="px-6 py-4">
-                          {team.sl}
+                          {index + 1}
                         </td>
                         <td className="px-6 py-4">
                           {team.teamName}
                         </td>
-                        <td className="px-6 py-4">
+                        <td className="px-6 py-4 capitalize">
                           {team.teamLeader}
                         </td>
                         <td className="px-6 py-4">
                           {team.mailId}
+                        </td>
+                        <td className="px-6 py-4 capitalize">
+                          {team.clgName}
                         </td>
                       </tr>
                     )
@@ -88,53 +94,79 @@ const Results = () => {
         </div>
       </section>
 
-      <section className="bg-gray-900 rounded-lg py-4 mt-5">
-        <div className="container mx-auto text-center my-5">
-          <h3 className="text-2xl md:text-3xl font-semibold text-gray-100">TEAMS ON THE WAITING LIST</h3>
+      <section className="bg-gray-900 px-3 md:px-0 rounded-lg py-4 mt-5">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-100">Instructions to the finalists</h2>
         </div>
-        <div className="container mx-auto">
-          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-              <thead className="text-lg text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" className="px-6 py-3">
-                    Sl. No.
-                  </th>
-                  <th scope="col" className="px-6 py-3">
-                    Team Name
-                  </th>
-                  <th scope="col" className="px-6 py-3">
-                    Team Leader Name
-                  </th>
-                  <th scope="col" className="px-6 py-3">
-                    Team Leader Email
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {
-                  WaitingListTeams.map((team, index) => {
-                    return (
-                      <tr key={index} className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200 text-lg text-yellow-100">
-                        <td className="px-6 py-4">
-                          {team.sl}
-                        </td>
-                        <td className="px-6 py-4">
-                          {team.teamName}
-                        </td>
-                        <td className="px-6 py-4">
-                          {team.teamLeader}
-                        </td>
-                        <td className="px-6 py-4">
-                          {team.mailId}
-                        </td>
-                      </tr>
-                    )
-                  })}
-              </tbody>
-            </table>
-          </div>
+
+        <div className="container mx-auto text-center">
+          <p className="text-lg md:text-xl text-gray-100 text-pretty mt-4 max-w-3xl mx-auto p-1 md:p-0">
+            All the shortlisted Teams participating in TRITHON 2025 should make a short video with your teammates along with your project Mentor/Guide/HOD/Deans/Principal and share on or before 1st March 2025 with below mentioned content and guidelines. <br />
+            <br />
+            <h3 className="text-2xl md:text-3xl font-semibold text-gray-100">Video should contain the following:-</h3>
+            <div className='text-start text-blue-200'>
+              <ol>
+                <li className="disc my-2">
+                  1. About your team and your Institute .
+                </li>
+                <li className="disc my-2">
+                  2. Students  excitement about coming to Trident Group Of Institutions , Bhubaneswar for participation in TRITHON 2025.
+                </li>
+                <li className="disc my-2">
+                  3. Explain your project and creativity.
+                </li>
+                <li className="disc my-2">
+                  4. Give your Consent for Participation .
+                </li>
+                <li className="disc my-2">
+                  5. Explain your Technology and Innovation on your project.
+                </li>
+
+              </ol>
+            </div>
+            <br />
+            <h3 className="text-2xl md:text-3xl font-semibold text-gray-100">Guidelines for the Video:-</h3>
+            <div className='text-start text-blue-200'>
+              <ol>
+                <li className="disc my-2">
+                  1. Video should not be more than 45 secs.
+                </li>
+                <li className="disc my-2">
+                  2. Video should be 4:3 i.e. in vertical manner not in horizontal
+                </li>
+                <li className="disc my-2">
+                  3. Video quality should be in HD having 1080P.
+                </li>
+                <li className="disc my-2">
+                  4. Video should be send by the Team Leader on or before 1st March 2025.
+                </li>
+
+              </ol>
+            </div>
+            <div className='mt-5 text-yellow-200'>
+              Please share on WhatsApp(9439177066 - Aditya Sir) along with Team name and Serial No(As mentioned in shortlisted result published in website).
+            </div>
+            <br />
+            <br />
+            <h3 className="text-2xl md:text-3xl font-semibold text-gray-100">Rules And Regulations:-</h3>
+            <div className='text-start text-blue-200'>
+              <ol>
+                <li className="disc my-2">
+                  1. Teams must have exactly 6 members, including at least 1 girl student.
+                </li>
+                <li className="disc my-2">
+                  2. Team members should try to wear a same color T-shirts  (Optional).
+                </li>
+              </ol>
+            </div>
+            <br />
+            <br />
+            <div className='mt-5 text-yellow-300'>
+              (NOTE:- IF A TEAM IS NOT ABLE TO SEND THE VIDEO on or before 1st March 2025 THEN THE NEXT WAIT LISTED TEAM WILL GET SHORTLISTED. THIS VIDEO WILL BE PUBLISHED IN TRITHON SOCIAL MEDIA LINKS)
+            </div>
+          </p>
         </div>
+
       </section>
     </main>
   )
