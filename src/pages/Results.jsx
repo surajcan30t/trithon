@@ -1,6 +1,5 @@
 import React from 'react'
 import ShortlistedTeams from '../../data/shortlistedteams'
-import WaitingListTeams from '../../data/waitinglistteams'
 
 const Results = () => {
   return (
