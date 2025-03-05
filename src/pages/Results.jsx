@@ -1,5 +1,5 @@
 import React from 'react'
-import ShortlistedTeams from '../../data/shortlistedteams'
+import ShortlistedTeams, {secondRoundShortlisted} from '../../data/shortlistedteams'
 
 const Results = () => {
   return (
@@ -37,7 +37,66 @@ const Results = () => {
         </div>
 
       </section>
-
+      
+      <section className="bg-gray-900 rounded-lg py-4 mt-5">
+        <div className="container mx-auto text-center my-5">
+          <h3 className="text-xl font-semibold text-yellow-200"><span className='text-2xl font-bold'><u>Important Update:</u></span> <br /> Team Participation in Trithon
+We are thrilled to have shortlisted 45 fantastic teams for Trithon! However, as five of these teams have opted out, we are excited to announce that the next five teams from our shortlist will now be participating. Best of luck to all the teams involved!</h3>
+        </div>
+        <div className="container mx-auto">
+          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table className="w-full text-sm text-left rtl:text-right text-gray-400">
+              <thead className="text-lg  uppercase bg-gray-700 text-gray-400">
+                <tr>
+                  <th scope="col" className="px-6 py-3">
+                    Sl. No.
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    Team Name
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    Team Leader Name
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    Team Leader Email
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    College Name
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  secondRoundShortlisted.map((team, index) => {
+                    return (
+                      <tr key={index} className="odd:bg-gray-900 even:bg-gray-800 border-b border-gray-700 text-lg text-yellow-100">
+                        <td className="px-6 py-4">
+                          {index + 1}
+                        </td>
+                        <td className="px-6 py-4">
+                          {team.teamName}
+                        </td>
+                        <td className="px-6 py-4 capitalize">
+                          {team.teamLeader}
+                        </td>
+                        <td className="px-6 py-4">
+                          {team.mailId}
+                        </td>
+                        <td className="px-6 py-4 capitalize">
+                          {team.clgName}
+                        </td>
+                      </tr>
+                    )
+                  })}
+              </tbody>
+            </table>
+            <div className='mt-5 text-yellow-300 text-lg px-1 text-center md:px-10 lg:px-20 xl:px-52 uppercase'>
+              (NOTE:- ALL THE SHORTLISTED TEAMS MUST SUBMIT THEIR VIDEO ASAP )
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <section className="bg-gray-900 rounded-lg py-4 mt-5">
         <div className="container mx-auto text-center my-5">
           <h3 className="text-2xl md:text-3xl font-semibold text-gray-100">LIST OF FINALISTS</h3>
@@ -160,7 +219,7 @@ const Results = () => {
             </div>
             <br />
             <br />
-            <div className='mt-5 text-yellow-300'>
+            <div className='mt-5 text-yellow-300 uppercase'>
               (NOTE:- IF A TEAM IS NOT ABLE TO SEND THE VIDEO on or before 1st March 2025 THEN THE NEXT WAIT LISTED TEAM WILL GET SHORTLISTED. THIS VIDEO WILL BE PUBLISHED IN TRITHON SOCIAL MEDIA LINKS)
             </div>
           </p>

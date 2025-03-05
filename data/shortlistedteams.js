@@ -46,5 +46,14 @@ const ShortlistedTeams = [
   { "sl": 45, "teamName": "Green Army", "teamLeader": "Soumendra Barick", "mailId": "soumendrabarick86@gmail.com", "clgName": "TRIDENT ACADEMY OF TECHNOLOGY" }
 ]
 
+const secondRoundShortlisted = [
+  { "sl": 41, "teamName": "Overclocked Minds", "teamLeader": "Saheli Ghosh", "mailId": "sohelighosh30@gmail.com", "clgName": "JIS College of Engineering" },
+  { "sl": 42, "teamName": "BinGenius", "teamLeader": "Tanushree Lenka", "mailId": "om.n2023btcseds@srisriuniversity.edu.in", "clgName": "Sri Sri University" },
+  { "sl": 43, "teamName": "Sustainheros", "teamLeader": "Rudra Narayan Jena", "mailId": "rudranarayanjena890@gmail.com", "clgName": "TRIDENT ACADEMY OF TECHNOLOGY" },
+  { "sl": 44, "teamName": "Meta Achievers", "teamLeader": "Arvind Kumar Sahu", "mailId": "arvindsahu914@gmail.com", "clgName": "NIST University, Berhampur" },
+  { "sl": 45, "teamName": "Tech Titans", "teamLeader": "Asharam Mallick", "mailId": "armallick2002@gmail.com", "clgName": "TRIDENT ACADEMY OF TECHNOLOGY" }
+]
+
+export {secondRoundShortlisted}
 
 export default ShortlistedTeams
